@@ -52,190 +52,106 @@
 <div>
     <div class="reservacionesTxt">especialistas en grupo vag y motores europeos</div>
 </div>
-<div class="mainContainer">
+<div style="background-color:#ececec;" class="mainContainer">
     <script defer async src='https://cdn.trustindex.io/loader.js?318bef557aee6898a226fead0bf'></script>
 </div>
-<div class="mainContainer">
-    
-    <div style="text-align: center;margin:40px 0px;">
-        <table class="webDisplay" border="0" style="display: inline-table;max-width: 1200px;display: inline-table;">
-            <tbody>
-                <tr>
-                    <td>
-                        <img alt="logo vw" style="width: 100%;" src="imagesApp/vw.webp">
-                    </td>
-                    <td>
-                        <img alt="logo audi" style="width: 100%;" src="imagesApp/audi.webp">
-                    </td>
-                    <td>
-                        <img alt="logo seat" style="width: 100%;" src="imagesApp/seat.webp">
-                    </td>
-                    <td>
-                        <img alt="logo mercedes" style="width: 100%;" src="imagesApp/mercedes.webp">
-                    </td>
-                    <td>
-                        <img alt="logo bmw" style="width: 100%;" src="imagesApp/bmw.webp">
-                    </td>
-                    <td>
-                        <img alt="logo mini" style="width: 100%;" src="imagesApp/mini.webp">
-                    </td>
-                    <td>
-                        <img alt="logo porsch" style="width: 100%;" src="imagesApp/porsch.webp">
-                    </td>
-                    <td>
-                        <img alt="logo cupra" style="width: 100%;" src="imagesApp/cupra.webp">
-                    </td>
-                    <td>
-                        <img alt="logo jaguar" style="width: 100%;" src="imagesApp/jaguar.webp">
-                    </td>
-                </tr>
-            </tbody>
+
+<div>
+    <div class="mainContainer">
+        
+        <div style="text-align: center;margin:40px 0px;">
+            <table class="webDisplay" border="0" style="display: inline-table;max-width: 1200px;display: inline-table;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img alt="logo vw" style="width: 100%;" src="imagesApp/vw.webp">
+                        </td>
+                        <td>
+                            <img alt="logo audi" style="width: 100%;" src="imagesApp/audi.webp">
+                        </td>
+                        <td>
+                            <img alt="logo seat" style="width: 100%;" src="imagesApp/seat.webp">
+                        </td>
+                        <td>
+                            <img alt="logo mercedes" style="width: 100%;" src="imagesApp/mercedes.webp">
+                        </td>
+                        <td>
+                            <img alt="logo bmw" style="width: 100%;" src="imagesApp/bmw.webp">
+                        </td>
+                        <td>
+                            <img alt="logo mini" style="width: 100%;" src="imagesApp/mini.webp">
+                        </td>
+                        <td>
+                            <img alt="logo porsch" style="width: 100%;" src="imagesApp/porsch.webp">
+                        </td>
+                        <td>
+                            <img alt="logo cupra" style="width: 100%;" src="imagesApp/cupra.webp">
+                        </td>
+                        <td>
+                            <img alt="logo jaguar" style="width: 100%;" src="imagesApp/jaguar.webp">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="mobilDisplay" border="0" style="display: inline-table;max-width: 900px;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img alt="logo vw" style="width: 100%;" src="imagesApp/vw.webp">
+                        </td>
+                        <td>
+                            <img alt="logo audi" style="width: 100%;" src="imagesApp/audi.webp">
+                        </td>
+                        <td>
+                            <img alt="logo seat" style="width: 100%;" src="imagesApp/seat.webp">
+                        </td>
+                        <td>
+                            <img alt="logo mercedes" style="width: 100%;" src="imagesApp/mercedes.webp">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="mobilDisplay" border="0" style="display: inline-table;max-width: 900px;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img alt="logo bmw" style="width: 100%;" src="imagesApp/bmw.webp">
+                        </td>
+                        <td>
+                            <img alt="logo mini" style="width: 100%;" src="imagesApp/mini.webp">
+                        </td>
+                        <td>
+                            <img alt="logo porsch" style="width: 100%;" src="imagesApp/porsch.webp">
+                        </td>
+                        <td>
+                            <img alt="logo cupra" style="width: 100%;" src="imagesApp/cupra.webp">
+                        </td>
+                        <td>
+                            <img alt="logo jaguar" style="width: 100%;" src="imagesApp/jaguar.webp">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <table width="100%" border="0">
+            <tr>
+                <td><p class="seccion">mantenimiento en</p></td>
+            </tr>
+            <tr>
+                <td id="listaServ"></td>
+            </tr>
         </table>
-        <table class="mobilDisplay" border="0" style="display: inline-table;max-width: 900px;">
-            <tbody>
-                <tr>
-                    <td>
-                        <img alt="logo vw" style="width: 100%;" src="imagesApp/vw.webp">
-                    </td>
-                    <td>
-                        <img alt="logo audi" style="width: 100%;" src="imagesApp/audi.webp">
-                    </td>
-                    <td>
-                        <img alt="logo seat" style="width: 100%;" src="imagesApp/seat.webp">
-                    </td>
-                    <td>
-                        <img alt="logo mercedes" style="width: 100%;" src="imagesApp/mercedes.webp">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="mobilDisplay" border="0" style="display: inline-table;max-width: 900px;">
-            <tbody>
-                <tr>
-                    <td>
-                        <img alt="logo bmw" style="width: 100%;" src="imagesApp/bmw.webp">
-                    </td>
-                    <td>
-                        <img alt="logo mini" style="width: 100%;" src="imagesApp/mini.webp">
-                    </td>
-                    <td>
-                        <img alt="logo porsch" style="width: 100%;" src="imagesApp/porsch.webp">
-                    </td>
-                    <td>
-                        <img alt="logo cupra" style="width: 100%;" src="imagesApp/cupra.webp">
-                    </td>
-                    <td>
-                        <img alt="logo jaguar" style="width: 100%;" src="imagesApp/jaguar.webp">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+
     </div>
-
-    <table width="100%" border="0">
-        <tr>
-            <td><p class="seccion">mantenimiento en</p></td>
-        </tr>
-        <tr>
-            <td id="listaServ">
-
-
-             
-
-
-
-
-            </td>
-        </tr>
-    </table>
-
 </div>
 
 <script type="text/javascript" src="js/servicios.js"></script>
 <script>
 
-    let html = '';
-
-    for (let x = 0; x < serv.length; x++) {
-        let servLista = serv[x].lista;
-         if(serv[x].tipo === '1x'){
-            html += `<table class="tblServicios" border="0">
-                        <tr>
-                            <td class="tblTitulo">${serv[x].titulo}</td>
-                        </tr>
-                        <tr>
-                            <td class="tblDesc">${serv[x].desc}</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table class="tblConList" border="0">
-                                <tr>
-                                    <td>
-                                        <div class="tblList">
-                                            <ul>
-                                                ${ serv[x].lista.map( item => '<li><b>•</b> '+item.t+'</li>' ).join("") }
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </table>
-                                <table border="0">
-                                <tr>
-                                    <td class="tblImg">
-                                        <img alt="seccion motor" loading="lazy" src="${serv[x].img}">
-                                    </td>
-                                </tr>
-                                </table>
-                                
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="${serv[x].url}"><div class="tblBtn">VER MÁS</div></a>
-                            </td>
-                        </tr>
-                    </table>`;
-        }else{
-            html += `<table class="tblServicios2x" border="0">
-                  <tr>
-                    <td class="tblTitulo">${serv[x].titulo}</td>
-                  </tr>
-                  <tr>
-                    <td class="tblDesc">${serv[x].desc}</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">
-                        <table class="tblConList2x" border="0">
-                          <tr>
-                            <td>
-                                <div class="tblList">
-                                    <ul>
-                                        ${ serv[x].lista.map( item => '<li><b>•</b> '+item.t+'</li>' ).join("") }
-                                    </ul>
-                                </div>
-                            </td>
-                          </tr>
-                        </table>
-                        <table border="0">
-                          <tr>
-                            <td class="tblImg">
-                                <img alt="seccion serviciocompleto" loading="lazy" src="${serv[x].img}">
-                            </td>
-                          </tr>
-                        </table>
-                        
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">
-                        <a href="${serv[x].url}"><div class="tblBtn">VER MÁS</div></a>
-                    </td>
-                  </tr>
-                </table>`;
-        }
-    }
-
-    document.getElementById("listaServ").innerHTML = html;
+    const serv = portadaServ.concat(servicio2x);
+    document.getElementById("listaServ").innerHTML = armaServicios(serv);
+    flechas();
     
 </script>
 

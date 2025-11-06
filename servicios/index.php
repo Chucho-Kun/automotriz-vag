@@ -8,18 +8,32 @@
 
 <?php include('../nav.php'); ?>
 
-<div style="background-color:white;text-align: center;">
+<div style="background-color:white;text-align: center;margin-top:20px;">
 
-    <table width="100%" border="1">
+    <table width="100%" border="0">
         <tr>
-            <td><p class="seccion">Servicios</p></td>
+            <td><p class="seccion">nuestros servicios</p></td>
         </tr>
         <tr>
             <td>
+                    <table width="100%" style="max-width: 1200px;" border="0">
+                        <tr>
+                            <td id="listaServ"></td>
+                        </tr>
+                    </table>
 
             </td>
         </tr>
     </table>
+
+<script type="text/javascript" src="../js/servicios.js"></script>
+<script>
+
+    const serv = portadaServ.concat(servicio1x).concat(servicio2x);
+    document.getElementById("listaServ").innerHTML = armaServicios(serv);
+    flechas();
+
+</script>
 
 <?php include('../footer.php'); ?>
 

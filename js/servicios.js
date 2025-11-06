@@ -1,4 +1,4 @@
-const serv = [
+const portadaServ = [
 {
     tipo:"1x",
     titulo:"MOTOR",
@@ -10,7 +10,7 @@ const serv = [
         {t:"Lavado Cuerpo de Aceleración"},
         {t:"Lavado Exterior de Motor y Carrocería"},
     ],
-    img:"imagesServ/motor.jpg",
+    img:"/imagesServ/motor.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -21,7 +21,7 @@ const serv = [
         {t:"Motor 6 Cilindros"},
         {t:"Motor 8 Cilindros"},
     ],
-    img:"imagesServ/motor.jpg",
+    img:"/imagesServ/motor.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -34,7 +34,7 @@ const serv = [
         {t:"Emgrague Haldex"},
         {t:"Mantenimiento para Transmisión"},
     ],
-    img:"imagesServ/motor.jpg",
+    img:"/imagesServ/motor.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -45,9 +45,72 @@ const serv = [
         {t:"Entrega en Tiempo y Forma"},
         {t:"Usamos piezas originales"},
     ],
-    img:"imagesServ/motor.jpg",
+    img:"/imagesServ/motor.jpg",
+    url:"/"
+}
+];
+
+const servicio1x = [
+{
+    tipo:"1x",
+    titulo:"DIAGNOSTICO",
+    desc:"TIENE COSTO SI NO ES APROBADO",
+    lista:[
+        {t:"Escaneo"},
+        {t:"Revisión de lienas"},
+        {t:"Medición de sensores"},
+        {t:"Revisión del estado del Software"},
+        {t:"Medición de actuadores"},
+        {t:"Elaboración de Presupuesto"},
+        {t:"Solicitud de piezas a fabricante"},
+    ],
+    img:"/imagesServ/motor.jpg",
     url:"/"
 },{
+    tipo:"1x",
+    titulo:"AIRE ACONDICIONADO",
+    desc:"CARGA DE GAS PARA AIRE ACONDICIONADO",
+    lista:[
+        {t:"Servicio de carga"},
+        {t:"Bote líquido"},
+        {t:"Revisión del sistema"},
+    ],
+    img:"/imagesServ/motor.jpg",
+    url:"/"
+},{
+    tipo:"1x",
+    titulo:"SISTEMA ELÉCTRICO",
+    desc:"MANTENIMIENTO DE MOTORES",
+    lista:[
+        {t:"Servicio Menor"},
+        {t:"Servicio Mayor"},
+        {t:"Transmisión Automática"},
+        {t:"Mantenimiento DSG"},
+        {t:"Frenos de disco"},
+        {t:"Verificación"},
+        {t:"Diagnóstico"},
+        {t:"Suspensión Delantera"},
+        {t:"Suspensión Trasera"},
+        {t:"Frenos Balatas"},
+    ],
+    img:"/imagesServ/motor.jpg",
+    url:"/"
+},{
+    tipo:"1x",
+    titulo:"SISTEMA DE SEGURIDAD",
+    desc:"MANTENIMIENTO DEL SISTEMA DE SEGURIDAD",
+    lista:[
+        {t:"Disco de Freno"},
+        {t:"Balatas de Frenos"},
+        {t:"Líquido de Frenos"},
+    ],
+    img:"/imagesServ/motor.jpg",
+    url:"/"
+}
+];
+
+const servicio2x = [
+{
     tipo:"2x",
     titulo:"VERIFICACIÓN",
     desc:"SERVICIO COMPLETO",
@@ -58,7 +121,117 @@ const serv = [
         {t:"Revisión Motor"},
         {t:"Vamos por su coche si está dentro de la cobertura"},
     ],
-    img:"imagesServ/serviciocompleto.jpg",
+    img:"/imagesServ/serviciocompleto.jpg",
     url:"/"
 }
-]
+];
+
+function armaServicios(serv){
+    let html = '';
+
+    for (let x = 0; x < serv.length; x++) {
+        let servLista = serv[x].lista;
+         if(serv[x].tipo === '1x'){
+            html += `<table class="tblServicios" border="0">
+                        <tr>
+                            <td class="tblTitulo">${serv[x].titulo}</td>
+                        </tr>
+                        <tr>
+                            <td class="tblDesc">${serv[x].desc}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="tblConList" border="0">
+                                <tr>
+                                    <td>
+                                        <div class="tblList">
+                                            <ul>
+                                                ${ serv[x].lista.map( item => '<li><b>•</b> '+item.t+'</li>' ).join("") }
+                                            </ul>
+                                            <div class="scroll-indicator hidde" id="flechaAbajo">⬇</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </table>
+                                <table border="0">
+                                <tr>
+                                    <td class="tblImg">
+                                        <img alt="seccion motor" loading="lazy" src="${serv[x].img}">
+                                    </td>
+                                </tr>
+                                </table>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="${serv[x].url}"><div class="tblBtn">VER MÁS</div></a>
+                            </td>
+                        </tr>
+                    </table>`;
+        }else{
+            html += `<table class="tblServicios2x" border="0">
+                  <tr>
+                    <td class="tblTitulo">${serv[x].titulo}</td>
+                  </tr>
+                  <tr>
+                    <td class="tblDesc">${serv[x].desc}</td>
+                  </tr>
+                  <tr>
+                    <td class="tbl2xcontrol">
+                        <table class="tblConList2x" border="0">
+                          <tr>
+                            <td>
+                                <div class="tblList">
+                                    <ul>
+                                        ${ serv[x].lista.map( item => '<li><b>•</b> '+item.t+'</li>' ).join("") }
+                                    </ul>
+                                    <div class="scroll-indicator hidde" id="flechaAbajo">⬇</div>
+                                </div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table border="0">
+                          <tr>
+                            <td class="tblImg2x">
+                                <img alt="seccion serviciocompleto" loading="lazy" src="${serv[x].img}">
+                            </td>
+                          </tr>
+                        </table>
+                        
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">
+                        <a href="${serv[x].url}"><div class="tblBtn">VER MÁS</div></a>
+                    </td>
+                  </tr>
+                </table>`;
+        }
+    }
+    return html;
+}
+
+function flechas(){
+    const contenedores = document.querySelectorAll(".tblList");
+    contenedores.forEach(contenedor => {
+    const flecha = contenedor.querySelector(".scroll-indicator");
+
+    const lista = contenedor.querySelector("ul");
+    const totales = lista.querySelectorAll("li").length;
+
+    function actualizarFlecha() {
+        const scrollable = totales > 5;  //si supera los 5 servicios se muestra la flecha;
+        const alFinal = contenedor.scrollTop + contenedor.clientHeight >= contenedor.scrollHeight - 1;
+
+        if (scrollable && !alFinal) {
+        flecha.classList.add("show");
+        } else {
+        flecha.classList.remove("show");
+        }
+    }
+
+    contenedor.addEventListener("scroll", actualizarFlecha);
+    window.addEventListener("load", actualizarFlecha);
+    });
+}

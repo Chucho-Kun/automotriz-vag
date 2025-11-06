@@ -267,6 +267,7 @@ footer{text-align: center;margin-top: 20px;}
     margin-top: 25px;
     text-transform: uppercase;
     color: #BF2C2B;
+	margin-bottom: 18px;
 }
 
 
@@ -431,14 +432,18 @@ footer{text-align: center;margin-top: 20px;}
 }
 
 .conTelefono{
-    width: 25px;
-    height: 25px;
     padding: 5px;
-    background-color: green;
-    border-radius: 8px;
-    margin: 0px 5px;
     cursor: pointer;
-    border-radius: 8px;
+    border: solid 1px white;
+    height: 16px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    width: 100px;
+}
+
+.minicon{
+	width: 10px;
+	height: 10px;
 }
 
 .tblTitulo{
@@ -453,15 +458,31 @@ footer{text-align: center;margin-top: 20px;}
 	border: solid 1px #C6C6C5;
     margin: 5px;
     width: 100%;
-    max-width: 440px;
+    max-width: 410px;
 }
+
 .tblServicios2x{
 	border: solid 1px #C6C6C5;
     margin: 5px;
     width: 100%;
-    max-width: 890px;
+    max-width: 830px;
     text-align: left;
 }
+
+.tbl2xcontrol{
+	text-align: left;
+}
+
+@media (max-width: 845px){
+	.tbl2xcontrol{
+		text-align: center;
+	}
+	.tblServicios2x{
+		max-width: 410px;
+	}
+}
+
+
 
 .tblDesc{
 	font-weight: bold;
@@ -487,18 +508,40 @@ footer{text-align: center;margin-top: 20px;}
 	height: 120px;
 }
 
+.tblImg2x img{
+	width: 220px;
+	height: 130px;
+}
+
 .tblConList{
 	width: 100%;
-    max-width: 280px;
+    max-width: 260px;
 }
 .tblConList2x{
 	width: 100%;
-    max-width: 670px;
+    max-width: 460px;
+	padding-left: 15px;
 }
 
 .tblList{
 	text-align: left;
-    font-size: 16px;
+    font-size: 15px;
 	height: 130px;
 	overflow-y: scroll;
+}
+
+.scroll-indicator {
+  position: sticky;
+  bottom: 5px;
+  right: 10px;
+  font-size: 1.5em;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  color: #C6C6C5;
+  text-align: right;
+  opacity: 0;
+}
+
+.scroll-indicator.show {
+  opacity: 1;
 }
