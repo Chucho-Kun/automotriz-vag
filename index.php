@@ -132,39 +132,94 @@
         </table>
     </div>
 
-
-    <table width="100%" border="1">
+    <table width="100%" border="0">
         <tr>
             <td><p class="seccion">mantenimiento en</p></td>
         </tr>
         <tr>
-            <td>
-                <table class="tblServicios" border="0">
+            <td id="listaServ">
+
+
+             
+
+
+
+
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<script type="text/javascript" src="js/servicios.js"></script>
+<script>
+
+    let html = '';
+
+    for (let x = 0; x < serv.length; x++) {
+        let servLista = serv[x].lista;
+         if(serv[x].tipo === '1x'){
+            html += `<table class="tblServicios" border="0">
+                        <tr>
+                            <td class="tblTitulo">${serv[x].titulo}</td>
+                        </tr>
+                        <tr>
+                            <td class="tblDesc">${serv[x].desc}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="tblConList" border="0">
+                                <tr>
+                                    <td>
+                                        <div class="tblList">
+                                            <ul>
+                                                ${ serv[x].lista.map( item => '<li><b>•</b> '+item.t+'</li>' ).join("") }
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </table>
+                                <table border="0">
+                                <tr>
+                                    <td class="tblImg">
+                                        <img alt="seccion motor" loading="lazy" src="${serv[x].img}">
+                                    </td>
+                                </tr>
+                                </table>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="${serv[x].url}"><div class="tblBtn">VER MÁS</div></a>
+                            </td>
+                        </tr>
+                    </table>`;
+        }else{
+            html += `<table class="tblServicios2x" border="0">
                   <tr>
-                    <td class="tblTitulo">MOTOR</td>
+                    <td class="tblTitulo">${serv[x].titulo}</td>
                   </tr>
                   <tr>
-                    <td class="tblDesc">MANTENIMIENTO MAYOR (incluye refacciones)</td>
+                    <td class="tblDesc">${serv[x].desc}</td>
                   </tr>
                   <tr>
-                    <td>
-                        <table border="0">
+                    <td style="text-align: center;">
+                        <table class="tblConList2x" border="0">
                           <tr>
-                            <td class="tblList">
-                                <ul>
-                                    <li>Remplazo de Bujias, Filtros y Aceite</li>
-                                    <li>Revisión 30 puntos de Seguridad</li>
-                                    <li>Escaneo con Hardware Odis Engineering</li>
-                                    <li>Lavado Cuerpo de Aceleración</li>
-                                    <li>Lavado Exterior de Motor y Carrocería</li>
-                                </ul>
+                            <td>
+                                <div class="tblList">
+                                    <ul>
+                                        ${ serv[x].lista.map( item => '<li><b>•</b> '+item.t+'</li>' ).join("") }
+                                    </ul>
+                                </div>
                             </td>
                           </tr>
                         </table>
                         <table border="0">
                           <tr>
                             <td class="tblImg">
-                                <img alt="logo vw" style="width: 100%;" src="imagesServ/motor.jpg">
+                                <img alt="seccion serviciocompleto" loading="lazy" src="${serv[x].img}">
                             </td>
                           </tr>
                         </table>
@@ -172,16 +227,17 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>
-                        <a href="/"><div class="tblBtn">VER MÁS</div></a>
+                    <td style="text-align: center;">
+                        <a href="${serv[x].url}"><div class="tblBtn">VER MÁS</div></a>
                     </td>
                   </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                </table>`;
+        }
+    }
 
-</div>
+    document.getElementById("listaServ").innerHTML = html;
+    
+</script>
 
 <?php include('footer.php'); ?>
 
@@ -199,6 +255,7 @@ let ancho = $(window).width();
 
 $(window).resize(function(event){ ajustaAlturaB(); });
 ajustaAlturaB();
+
 </script>
 
 <script type="text/javascript">
