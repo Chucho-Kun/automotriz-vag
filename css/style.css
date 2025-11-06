@@ -27,11 +27,26 @@ ul {
     display: inline-block;
 }
 
+.secciones{
+	background-color:white;
+	text-align: center;
+	margin-top:20px;
+}
+
 a{text-decoration: none;color: #fff;}
 table{font-family: "Jost", sans-serif;display: inline-table;}
 select{cursor: pointer;}
 input{cursor: pointer;}
 input:focus{outline: none;}
+.txt{
+	text-align: left;
+}
+
+.linear{
+	background-color: #ececec;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
 
 @media (max-width: 1000px){
 	.iframeEscritorio{display: none;} 
@@ -509,8 +524,8 @@ footer{text-align: center;margin-top: 20px;}
 }
 
 .tblImg2x img{
-	width: 220px;
-	height: 130px;
+	width: 290px;
+	height: 125px;
 }
 
 .tblConList{
@@ -540,6 +555,7 @@ footer{text-align: center;margin-top: 20px;}
   color: #C6C6C5;
   text-align: right;
   opacity: 0;
+  font-size: 18px;
 }
 
 .scroll-indicator.show {

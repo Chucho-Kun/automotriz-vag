@@ -21,7 +21,7 @@ const portadaServ = [
         {t:"Motor 6 Cilindros"},
         {t:"Motor 8 Cilindros"},
     ],
-    img:"/imagesServ/motor.jpg",
+    img:"/imagesServ/ajuste-de-motor.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -34,7 +34,7 @@ const portadaServ = [
         {t:"Emgrague Haldex"},
         {t:"Mantenimiento para Transmisión"},
     ],
-    img:"/imagesServ/motor.jpg",
+    img:"/imagesServ/transmision.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -45,7 +45,7 @@ const portadaServ = [
         {t:"Entrega en Tiempo y Forma"},
         {t:"Usamos piezas originales"},
     ],
-    img:"/imagesServ/motor.jpg",
+    img:"/imagesServ/suspensiones.jpg",
     url:"/"
 }
 ];
@@ -64,7 +64,7 @@ const servicio1x = [
         {t:"Elaboración de Presupuesto"},
         {t:"Solicitud de piezas a fabricante"},
     ],
-    img:"/imagesServ/motor.jpg",
+    img:"/imagesServ/diagnostico.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -75,7 +75,7 @@ const servicio1x = [
         {t:"Bote líquido"},
         {t:"Revisión del sistema"},
     ],
-    img:"/imagesServ/motor.jpg",
+    img:"/imagesServ/aire-acondicionado.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -93,7 +93,7 @@ const servicio1x = [
         {t:"Suspensión Trasera"},
         {t:"Frenos Balatas"},
     ],
-    img:"/imagesServ/motor.jpg",
+    img:"/imagesServ/sistema-electrico.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -104,7 +104,7 @@ const servicio1x = [
         {t:"Balatas de Frenos"},
         {t:"Líquido de Frenos"},
     ],
-    img:"/imagesServ/motor.jpg",
+    img:"/imagesServ/sistema-de-seguridad.jpg",
     url:"/"
 }
 ];
@@ -121,7 +121,7 @@ const servicio2x = [
         {t:"Revisión Motor"},
         {t:"Vamos por su coche si está dentro de la cobertura"},
     ],
-    img:"/imagesServ/serviciocompleto.jpg",
+    img:"/imagesServ/verificacion.jpg",
     url:"/"
 }
 ];

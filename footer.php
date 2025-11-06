@@ -47,13 +47,13 @@ function menuLateral(){
 				<table class="footerTable">
 					<tr>
 						<td>
-							<a  class="rssBtn" style="padding:5px" href="">Preguntas</a>
+							<a class="rssBtn" style="padding:5px" href="/preguntas-frecuentes">Preguntas Frecuentes</a>
 						</td>
 						<td>
-							<a  class="rssBtn" style="padding:5px" href="">Contacto</a>
+							<a class="rssBtn" style="padding:5px" href="">Contacto</a>
 						</td>
 						<td>
-							<a  class="rssBtn" style="padding:5px" href="">Blog</a>
+							<a class="rssBtn" style="padding:5px" href="">Blog</a>
 						</td>						
 					</tr>
 				</table>

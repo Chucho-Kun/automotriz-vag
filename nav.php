@@ -63,7 +63,7 @@ echo '<div style="text-align: center;background-color: white;">
   
     
 </div>
-<div class="menuBTNflotante"><img alt="menu movil" onclick="menuLateral()" width="45" height="45" src="imagesApp/menuMobile.svg" /></div>
+<div class="menuBTNflotante"><img alt="menu movil" onclick="menuLateral()" width="45" height="45" src="/imagesApp/menuMobile.svg" /></div>
 
 </div>';
 

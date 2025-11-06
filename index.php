@@ -52,8 +52,10 @@
 <div>
     <div class="reservacionesTxt">especialistas en grupo vag y motores europeos</div>
 </div>
-<div style="background-color:#ececec;" class="mainContainer">
-    <script defer async src='https://cdn.trustindex.io/loader.js?318bef557aee6898a226fead0bf'></script>
+<div class="linear">
+    <div class="mainContainer">
+        <script defer async src='https://cdn.trustindex.io/loader.js?318bef557aee6898a226fead0bf'></script>
+    </div>
 </div>
 
 <div>

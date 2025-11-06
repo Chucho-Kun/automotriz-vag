@@ -8,7 +8,7 @@
 
 <?php include('../nav.php'); ?>
 
-<div style="background-color:white;text-align: center;margin-top:20px;">
+<div class="secciones">
 
     <table width="100%" border="0">
         <tr>
