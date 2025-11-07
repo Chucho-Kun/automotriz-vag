@@ -1,6 +1,6 @@
 <?php include('../header.php'); ?>
 
-<title>Nosotros</title>
+<title>Preguntas Frecuentes</title>
 
 </head>
 
@@ -16,39 +16,7 @@
         </tr>
         <tr>
             <td>
-                <!-- <ul id="indice">
-                <li><a href="#pregunta1">1 ¿Porque son caros?</a></li>
-                <li><a href="#pregunta2">2 ¿Porque se cobra diagnostico por sistema o área?</a></li>
-                <li><a href="#pregunta3">3 ¿Qué es el Mantenimiento Preventivo?</a></li>
-                </ul> -->
-                <!-- <table class="glosario" border="1">
-                  <tr>
-                    <td>
-                        <div>1 ¿Porque son caros?</div>
-                        <div>2 ¿Porque se cobra diagnostico por sistema o área?</div>
-                        <div>3 ¿Qué es el Mantenimiento Preventivo?</div>
-                        <div>4 ¿Qué mantenimiento debo hacer y cuándo?</div>
-                        <div>5 ¿Cómo sé cuándo mi coche necesita un diagnóstico?</div>
-                        <div>6 ¿Cómo debo preparar mi coche para un viaje por carretera?</div>
-                        <div>7 ¿Por qué mis frenos chillan?</div>
-                        <div>8 ¿Por qué necesito cambiar el aceite de mi motor cada 5,000 km?</div>
-                        <div>9 ¿Qué significa si se enciende la luz de "Check engine"?</div>
-                        <div>10 ¿Qué debo hacer si mi automóvil comienza a sobrecalentarse?</div>
-                        <div>11 ¿Por qué el aceite de motor es de color marrón lechoso?</div>
-                        <div>12 ¿Cómo me aseguro de que la batería de mi auto tenga una buena conexión eléctrica?</div>
-                        <div>13 ¿Debo considerar usar aceite de motor sintético en mi vehículo?</div>
-                        <div>14 ¿Cuándo debo reemplazar el filtro de combustible de mi automóvil?</div>
-                        <div>15 ¿Cuándo debo cambiar mis bujías?</div>
-                        <div>16 ¿Necesito reemplazar un fusible quemado, qué debo hacer?</div>
-                        <div>17 ¿Con qué frecuencia reviso el anticongelante? ¿Es necesario cambiarlo?</div>
-                        <div>18 ¿Cuánto duran las bujías?</div>
-                        <div>19 ¿Por qué debería pedirle que realice una inspección previa a la compra de un automóvil antes de comprarlo?</div>
-                        <div>20 ¿Debo dar mantenimiento a mi transmisión, aunque se supone que debe tener un fluido "de por vida"?</div>
-                        <div>21 ¿Cuánto cuesta reparar unidad mecatrónica dsg?</div>
-                        <div>22 Tengo una unidad mecatrónica defectuosa en mi coche. ¿puedo reemplazar la unidad defectuosa con la unidad usada que se toma de un coche similar, debe funcionar en mi coche?</div>
-                    </td>
-                  </tr>
-                </table> -->
+               
             </td>
         </tr>
         <tr>
@@ -202,10 +170,10 @@
 
 .index{
     padding: 5px 0px;
-background-color: #FCD22D;
-font-weight: bold;
-font-size: 18px;
-text-align: center;
+    background-color: #FCD22D;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
 }
 
 #indice {
@@ -272,8 +240,6 @@ li:hover{
 }
 </style>
 
-<!-- <div class="menuBTNflotante" style="display: inline-block;"><img alt="menu movil" onclick="menuLateral()" width="45" height="45" src="/imagesApp/menuMobile.svg"></div> -->
-
 <div class="indiceLateral">
     <p class="index">Índice de Preguntas</p>
    <ol id="indice">
@@ -312,8 +278,6 @@ li:hover{
 <?php include('../footer.php'); ?>
 
 </div>
-
-
 
 <script>
     $(document).ready(function() {

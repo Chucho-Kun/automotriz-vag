@@ -46,14 +46,14 @@ function menuLateral(){
 			<td>
 				<table class="footerTable">
 					<tr>
-						<td>
-							<a class="rssBtn" style="padding:5px" href="/preguntas-frecuentes">Preguntas Frecuentes</a>
+						<td width="33%">
+							<a class="rssBtn" style="padding:5px" href="/preguntas-frecuentes">Preguntas</a>
 						</td>
-						<td>
-							<a class="rssBtn" style="padding:5px" href="">Contacto</a>
+						<td width="33%">
+							<a class="rssBtn" style="padding:5px" href="/contacto">Contacto</a>
 						</td>
-						<td>
-							<a class="rssBtn" style="padding:5px" href="">Blog</a>
+						<td width="33%">
+							<a class="rssBtn" style="padding:5px" target="_blank" href="https://automotrizmora.com/blog/">Blog</a>
 						</td>						
 					</tr>
 				</table>
