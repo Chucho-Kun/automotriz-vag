@@ -55,11 +55,11 @@ echo '<div style="text-align: center;background-color: white;">
       </td>
     </tr>
   </table> -->
-  <a href="'.$rutasHeader[0]["url"].'" target="_blank"><p class="subMenu">'.$rutasHeader[0]["ruta"].'</p></a>
+  <a href="'.$rutasHeader[0]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[0]["ruta"].'</p></a>
   <a href="'.$rutasHeader[1]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[1]["ruta"].'</p></a>
   <a href="'.$rutasHeader[2]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[2]["ruta"].'</p></a>
   <a href="'.$rutasHeader[3]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[3]["ruta"].'</p></a>
-  <a href="'.$rutasHeader[4]["url"].'" target="_blank"><p class="subMenu">'.$rutasHeader[4]["ruta"].'</p></a>
+  <a href="'.$rutasHeader[4]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[4]["ruta"].'</p></a>
   
     
 </div>
