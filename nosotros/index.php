@@ -7,6 +7,8 @@
 <body>
 
 <?php include('../nav.php'); ?>
+<?php include('../router.php'); ?>
+
 
 <div class="secciones">
 
@@ -29,7 +31,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <img width="100%" style="max-width: 700px;" src="/imagesNosotros/taller.jpg" alt="taller automotriz mora">
+                                <img width="100%" style="max-width: 700px;" src="<?php echo $servidor; ?>/imagesNosotros/taller.jpg" alt="taller automotriz mora">
                             </td>
                         </tr>
                         <tr>
@@ -44,7 +46,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <img width="100%" style="max-width: 700px;" src="/imagesNosotros/taller-2.jpg" alt="taller automotriz mora">
+                                <img width="100%" style="max-width: 700px;" src="<?php echo $servidor; ?>/imagesNosotros/taller-2.jpg" alt="taller automotriz mora">
                             </td>
                         </tr>
                     </table>

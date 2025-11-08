@@ -1,5 +1,5 @@
 <?php 
-$servidor = "/";
+include('router.php');
 
 $rutasHeader = [
     ["ruta" => "nosotros", "url" => "/nosotros/"],
@@ -16,12 +16,12 @@ echo '<div style="text-align: center;background-color: white;">
 
 	<table class="navHeader menuEsc" border="0" width="100%">
 		<tr>
-			<td style="width:20%"> <a href="../"> <img width="135" height="60" alt="logo Automotriz Mora" class="logos" src="'.$servidor.'imagesApp/logo.webp" /> </a></td>
-			<td id="'.$rutasHeader[0]["ruta"].'"> <a class="rssBtn spc" href="'.$rutasHeader[0]["url"].'" >'.$rutasHeader[0]["ruta"].'</a></td>
-			<td id="'.$rutasHeader[1]["ruta"].'"> <a class="rssBtn spc" href="'.$rutasHeader[1]["url"].'" >'.$rutasHeader[1]["ruta"].'</a></td> </td>
-			<td id="'.$rutasHeader[2]["ruta"].'"> <a class="rssBtn spc" href="'.$rutasHeader[2]["url"].'" >'.$rutasHeader[2]["ruta"].'</a></td> </td>
-			<td id="'.$rutasHeader[3]["ruta"].'"> <a class="rssBtn spc" href="'.$rutasHeader[3]["url"].'" >'.$rutasHeader[3]["ruta"].'</a></td> </td>
-			<td id="'.$rutasHeader[4]["ruta"].'"> <a class="rssBtn spc" href="'.$rutasHeader[4]["url"].'" >'.$rutasHeader[4]["ruta"].'</a></td> </td>
+			<td style="width:20%"> <a href="../"> <img width="135" height="60" alt="logo Automotriz Mora" class="logos" src="'.$servidor.'/imagesApp/logo.webp" /> </a></td>
+			<td id="'.$rutasHeader[0]["ruta"].'"> <a class="rssBtn spc" href="'.$servidor.$rutasHeader[0]["url"].'" >'.$rutasHeader[0]["ruta"].'</a></td>
+			<td id="'.$rutasHeader[1]["ruta"].'"> <a class="rssBtn spc" href="'.$servidor.$rutasHeader[1]["url"].'" >'.$rutasHeader[1]["ruta"].'</a></td> </td>
+			<td id="'.$rutasHeader[2]["ruta"].'"> <a class="rssBtn spc" href="'.$servidor.$rutasHeader[2]["url"].'" >'.$rutasHeader[2]["ruta"].'</a></td> </td>
+			<td id="'.$rutasHeader[3]["ruta"].'"> <a class="rssBtn spc" href="'.$servidor.$rutasHeader[3]["url"].'" >'.$rutasHeader[3]["ruta"].'</a></td> </td>
+			<td id="'.$rutasHeader[4]["ruta"].'"> <a class="rssBtn spc" href="'.$servidor.$rutasHeader[4]["url"].'" >'.$rutasHeader[4]["ruta"].'</a></td> </td>
 			
 		</tr>
 	</table>
@@ -55,11 +55,11 @@ echo '<div style="text-align: center;background-color: white;">
       </td>
     </tr>
   </table> -->
-  <a href="'.$rutasHeader[0]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[0]["ruta"].'</p></a>
-  <a href="'.$rutasHeader[1]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[1]["ruta"].'</p></a>
-  <a href="'.$rutasHeader[2]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[2]["ruta"].'</p></a>
-  <a href="'.$rutasHeader[3]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[3]["ruta"].'</p></a>
-  <a href="'.$rutasHeader[4]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[4]["ruta"].'</p></a>
+  <a href="'.$servidor.$rutasHeader[0]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[0]["ruta"].'</p></a>
+  <a href="'.$servidor.$rutasHeader[1]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[1]["ruta"].'</p></a>
+  <a href="'.$servidor.$rutasHeader[2]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[2]["ruta"].'</p></a>
+  <a href="'.$servidor.$rutasHeader[3]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[3]["ruta"].'</p></a>
+  <a href="'.$servidor.$rutasHeader[4]["url"].'" target="_self"><p class="subMenu">'.$rutasHeader[4]["ruta"].'</p></a>
   
     
 </div>

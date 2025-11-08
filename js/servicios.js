@@ -1,3 +1,4 @@
+const servidor = "/nuevowebsite";
 const portadaServ = [
 {
     tipo:"1x",
@@ -10,7 +11,7 @@ const portadaServ = [
         {t:"Lavado Cuerpo de Aceleración"},
         {t:"Lavado Exterior de Motor y Carrocería"},
     ],
-    img:"/imagesServ/motor.jpg",
+    img: servidor+"/imagesServ/motor.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -21,7 +22,7 @@ const portadaServ = [
         {t:"Motor 6 Cilindros"},
         {t:"Motor 8 Cilindros"},
     ],
-    img:"/imagesServ/ajuste-de-motor.jpg",
+    img: servidor+"/imagesServ/ajuste-de-motor.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -34,7 +35,7 @@ const portadaServ = [
         {t:"Emgrague Haldex"},
         {t:"Mantenimiento para Transmisión"},
     ],
-    img:"/imagesServ/transmision.jpg",
+    img: servidor+"/imagesServ/transmision.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -45,7 +46,7 @@ const portadaServ = [
         {t:"Entrega en Tiempo y Forma"},
         {t:"Usamos piezas originales"},
     ],
-    img:"/imagesServ/suspensiones.jpg",
+    img: servidor+"/imagesServ/suspensiones.jpg",
     url:"/"
 }
 ];
@@ -64,7 +65,7 @@ const servicio1x = [
         {t:"Elaboración de Presupuesto"},
         {t:"Solicitud de piezas a fabricante"},
     ],
-    img:"/imagesServ/diagnostico.jpg",
+    img: servidor+"/imagesServ/diagnostico.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -75,7 +76,7 @@ const servicio1x = [
         {t:"Bote líquido"},
         {t:"Revisión del sistema"},
     ],
-    img:"/imagesServ/aire-acondicionado.jpg",
+    img: servidor+"/imagesServ/aire-acondicionado.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -93,7 +94,7 @@ const servicio1x = [
         {t:"Suspensión Trasera"},
         {t:"Frenos Balatas"},
     ],
-    img:"/imagesServ/sistema-electrico.jpg",
+    img: servidor+"/imagesServ/sistema-electrico.jpg",
     url:"/"
 },{
     tipo:"1x",
@@ -104,7 +105,7 @@ const servicio1x = [
         {t:"Balatas de Frenos"},
         {t:"Líquido de Frenos"},
     ],
-    img:"/imagesServ/sistema-de-seguridad.jpg",
+    img: servidor+"/imagesServ/sistema-de-seguridad.jpg",
     url:"/"
 }
 ];
@@ -121,7 +122,7 @@ const servicio2x = [
         {t:"Revisión Motor"},
         {t:"Vamos por su coche si está dentro de la cobertura"},
     ],
-    img:"/imagesServ/verificacion.jpg",
+    img: servidor+"/imagesServ/verificacion.jpg",
     url:"/"
 }
 ];

@@ -1,12 +1,13 @@
 <?php
 
+include('router.php');
+
 $year_footer = date("Y");
-$servidor = "";
 
 echo '
 <script>
     const path = window.location.pathname;
-    const seccion = path.split(\'/\').filter(Boolean)[0];
+    const seccion = path.split(\'/\').filter(Boolean)[1];
     $(\'#\'+seccion).css(\'border-bottom\', \'solid\');
 </script>
 <script>
@@ -47,10 +48,10 @@ function menuLateral(){
 				<table class="footerTable">
 					<tr>
 						<td width="33%">
-							<a class="rssBtn" style="padding:5px" href="/preguntas-frecuentes">Preguntas</a>
+							<a class="rssBtn" style="padding:5px" href="'.$servidor.'/preguntas-frecuentes">Preguntas</a>
 						</td>
 						<td width="33%">
-							<a class="rssBtn" style="padding:5px" href="/contacto">Contacto</a>
+							<a class="rssBtn" style="padding:5px" href="'.$servidor.'/contacto">Contacto</a>
 						</td>
 						<td width="33%">
 							<a class="rssBtn" style="padding:5px" target="_blank" href="https://automotrizmora.com/blog/">Blog</a>
