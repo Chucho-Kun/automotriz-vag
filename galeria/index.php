@@ -74,6 +74,12 @@
         top: -45px;
         padding-top: 8px;
     }
+
+    .contenedor{
+        text-align: center;
+        max-width: 1400px;
+        display: inline-block;
+    }
 </style>
 
 <body>
@@ -92,8 +98,8 @@
         <tr>
             <td>
                 <?php 
-                    $carpeta = '../imagesGaleria/horizontales/';
-                    include('lector.php')
+                    $carpeta = 'horizontales';
+                    include('lector.php');
                 ?>
             </td>
         </tr>
@@ -101,8 +107,8 @@
 
     <div style="background-color: #efefef;text-align: center;max-width: 1400px;display: inline-block;padding: 20px 0px;">
         <?php 
-            $carpeta = '../imagesGaleria/verticales/';
-            include('lector.php')
+            $carpeta = 'verticales';
+            include('lector.php');
         ?>
     </div>
 
@@ -134,7 +140,7 @@
     $('html').on('click', '.galeria', function(event) {
 
         miGaleria();
-        let url = $(this).find('img').attr('src');
+        let url = $(this).find('img').attr('name');
         let texto = 'Contactar por WhatsApp'; //$(this).find('.nombreClass').text();
         
         console.log("vamos a mostrar la foto en grande");
@@ -145,7 +151,7 @@
                 <tr>
                     <td class="multipleOpcion" style="">
                         <div onclick="miGaleria()"> 
-                            <img width="20px" src="/imagesApp/crossRed.svg" style="background-color: white;border-radius: 100px;padding: 10px;cursor: pointer;position: relative;top: 32px;display: inline-block;z-index:2;"> 
+                            <img width="20px" src="../imagesApp/crossRed.svg" style="background-color: white;border-radius: 100px;padding: 10px;cursor: pointer;position: relative;top: 32px;display: inline-block;z-index:2;"> 
                         </div>
                     </td>
                 </tr>
@@ -159,7 +165,7 @@
                                     <tr>
                                         <td width="20%" style="text-align: center;">
                                             <div>
-                                                <img alt="Whatsapp" class="whatsapp rssBtn" src="/imagesApp/whatsapp.svg" width="30" height="30">
+                                                <img alt="Whatsapp" class="whatsapp rssBtn" src="../imagesApp/whatsapp.svg" width="30" height="30">
                                             </div>
                                         </td>
                                         <td width="60%" style="text-align: left;">

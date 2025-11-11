@@ -1,6 +1,7 @@
 <?php
 
-$servidor = "/nuevowebsite";
+//$servidor = "/nuevowebsite";
+$servidor = "..";
 //$rutaMaster = "/";
 
 ?>

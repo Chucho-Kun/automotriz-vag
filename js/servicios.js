@@ -1,4 +1,5 @@
-const servidor = "/nuevowebsite";
+//const servidor = "/nuevowebsite";
+const servidor = "../";
 const portadaServ = [
 {
     tipo:"1x",
