@@ -18,7 +18,59 @@
     }
     .contenedor{
         width: 100%;
-        max-width: 412px;
+        max-width: 1400px;
+    }
+
+        ul { list-style: none; padding: 0; }
+    li { margin: 5px 0; }
+    #resultados{background-color: gray;}
+    .pdf{
+        width: 250px;
+        background-color: #efefef;
+        border-radius: 11px;
+    }
+    .iconPDF{
+        width: 50px;
+        padding: 5px;
+    }
+
+    #tags {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 10px;
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    #tags p{
+        background-color: #fcd22d;
+        border-radius: 8px;
+        padding: 5px 15px;
+        margin: 0;
+        font-size: 12px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+    }
+
+    .tituloPDF{
+        font-weight: bold;
+        padding: 5px 0px;
+        font-size: 14px;
+    }
+
+    .contResult {
+        width: 260px;
+        display: inline-block;
+    }
+
+    input {
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        max-width: 200px;
+        font-family: 'Jost', sans-serif;
+        font-weight: bold;
     }
 </style>
 
@@ -38,60 +90,21 @@
                 <table class="contenedor" border="0">
                   <tr>
                     <td>
-                        <div style="text-align: left;">
-                            <label for="buscadorGarantias" style="font-weight:bold;">BUSCAR GARANTÍAS</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                        <select id="buscadorGarantias">
-                            <option selected="selected" disabled>GARANTIAS</option>   
-                            <option value="Garantia 1">Garantia 1</option>
-                            <option value="Garantia 2">Garantia 2</option>
-                            <option value="Garantia 3">Garantia 3</option>
-                            <option value="Garantia 4">Garantia 4</option>
-                        </select>
-                        <button class="btn">buscar</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                        RESULTADOS
-                    </td>
-                  </tr>
-                </table>
-                
-                
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-
-                <table class="contenedor" border="0">
-                  <tr>
-                    <td>
-                        <div style="text-align: left;">
-                            <label for="buscadorManuales" style="font-weight:bold;">BUSCAR MANUALES</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
+                        <input type="text" id="buscador" placeholder="Buscar PDF...">
                         <select id="buscadorManuales">
-                            <option selected="selected" disabled>MANUALES</option>   
-                            <option value="Garantia 1">Manual 1</option>
-                            <option value="Garantia 2">Manual 2</option>
-                            <option value="Garantia 3">Manual 3</option>
-                            <option value="Garantia 4">Manual 4</option>
+                            <option selected="selected" disabled>Procedimientos / Aprietes</option>   
+                            <option value="Direccion">Direccion</option>
+                            <option value="Frenos">Frenos</option>
+                            <option value="Soportes">Soportes</option>
+                            <option value="Suspension">Suspension</option>
+                            <option value="Transmision">Transmision</option>
                         </select>
-                        <button class="btn">buscar</button>
+                        <button class="btn">filtrar</button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                        RESULTADOS
+                          <div id="totalResultados"></div>
                     </td>
                   </tr>
                 </table>
@@ -99,6 +112,75 @@
             </td>
         </tr>
     </table>
+
+    <div id="listaPDFs"></div>
+</head>
+
+
+
+  <script>
+    let archivos = [];
+
+    fetch("armador.php")
+      .then(res => res.json())
+      .then(data => {
+        archivos = data;
+        console.log(archivos);
+      } );
+
+    const buscador = document.getElementById("buscador");
+    const resultados = document.getElementById("listaPDFs");
+
+    buscador.addEventListener("input", () => {
+    const texto = buscador.value.toLowerCase();
+    resultados.innerHTML = "";
+
+    if(texto.length >= 3){
+        const filtrados = archivos.filter(a => a.nombre.toLowerCase().includes(texto));
+
+        filtrados.forEach(a => {
+            const div = document.createElement("div");
+            div.classList.add("contResult");
+
+            let rawString = a.nombre;
+            let partes = rawString.split("|");
+            let titulo = partes.pop();
+            let tags = partes;
+
+            div.innerHTML = `
+            <table categoria="${ a.categoria }" class="pdf" border="0">
+                <tr>
+                <td>
+                    <a style="color:black;" href="${a.ruta}" target="_blank">
+                    <div class="tituloPDF">${ titulo }</div>
+                    </a>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <a href="${a.ruta}" target="_blank">
+                    <img class="iconPDF" src="../imagesApp/pdf.svg" alt="pdf icon">
+                    </a>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                    <div id="tags">${
+                        tags.map( tag => '<p>'+tag+'</p>').join('')
+                    }
+                    </div>
+                </td>
+            </table>`;
+            resultados.appendChild(div);
+        });
+        const res = filtrados.length;
+        const total = document.getElementById("totalResultados");
+        total.innerHTML = `<p>${ res } ${ res === 1 ? 'Resultado' : 'Resultados' } </p>`;
+    }
+
+    });
+  </script>
+
 
 <?php include('../footer.php'); ?>
 
