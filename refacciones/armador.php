@@ -1,4 +1,6 @@
 <?php
+include('../router.php');
+
 function listarPDFs($dir) {
     $archivos = [];
     $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir));
@@ -17,7 +19,7 @@ function listarPDFs($dir) {
     return $archivos;
 }
 
-$directorioBase = $_SERVER['DOCUMENT_ROOT'] . "/directorioPDFs/"; 
+$directorioBase = $_SERVER['DOCUMENT_ROOT'] . $servidor . "/directorioPDFs/"; 
 
 $pdfs = listarPDFs($directorioBase);
 
@@ -42,12 +44,4 @@ function categoMaker($ruta){
     return $siguiente;
 }
 
-
-
-/*
-en PHP tengo un string "/directorioPDFs/VAG/MLB/Audi/Chasis 4G A6 2011-2018/Motor 3L/Procedimientos y aprietes/Frenos/Discos/Delantero/Extracción y reemplazo/Disco de acero - extracción e instalación.pdf" 
-dame un codigo en php para obtener el nombre del siguiente "/" siempre después de  "Procedimientos y aprietes". En este caso es "Frenos"
-
-quitar la parte de /directorioPDFs y armar un nuevo string como "VAG | MLB | Audi | Chasis 4G A6 2011-2018 | Motor 3L | Procedimientos y aprietes | Frenos | Discos | Delantero | Extracción y reemplazo | Disco de acero - extracción e instalación.pdf"
- */
 ?>
