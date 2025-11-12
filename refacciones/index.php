@@ -62,6 +62,8 @@
     .contResult {
         width: 260px;
         display: inline-block;
+        vertical-align: text-top;
+        margin-bottom: 10px;
     }
 
     input {
@@ -92,14 +94,14 @@
                     <td>
                         <input type="text" id="buscador" placeholder="Buscar PDF...">
                         <select id="buscadorManuales">
-                            <option selected="selected" disabled>Procedimientos / Aprietes</option>   
-                            <option value="Direccion">Direccion</option>
+                            <option selected="selected" disabled>Procedimientos</option>   
+                            <option value="Dirección">Dirección</option>
                             <option value="Frenos">Frenos</option>
                             <option value="Soportes">Soportes</option>
-                            <option value="Suspension">Suspension</option>
-                            <option value="Transmision">Transmision</option>
+                            <option value="Suspensión">Suspensión</option>
+                            <option value="Transmisión">Transmisión</option>
                         </select>
-                        <button class="btn">filtrar</button>
+                        <!-- <button class="btn">filtrar</button> -->
                     </td>
                   </tr>
                   <tr>
@@ -125,7 +127,6 @@
       .then(res => res.json())
       .then(data => {
         archivos = data;
-        console.log(archivos);
       } );
 
     const buscador = document.getElementById("buscador");
@@ -141,27 +142,30 @@
         filtrados.forEach(a => {
             const div = document.createElement("div");
             div.classList.add("contResult");
+            div.setAttribute("name" , a.categoria );
 
             let rawString = a.nombre;
             let partes = rawString.split("|");
+            partes = partes.map( p => p.trim() );
+
             let titulo = partes.pop();
-            let tags = partes;
+            let tags = partes.filter( cat =>  cat !== "Procedimientos y aprietes" );
 
             div.innerHTML = `
-            <table categoria="${ a.categoria }" class="pdf" border="0">
+            <table class="pdf" border="0">
                 <tr>
-                <td>
-                    <a style="color:black;" href="${a.ruta}" target="_blank">
-                    <div class="tituloPDF">${ titulo }</div>
-                    </a>
-                </td>
+                    <td>
+                        <a href="${a.ruta}" target="_blank">
+                        <img class="iconPDF" src="../imagesApp/pdf.svg" alt="pdf icon">
+                        </a>
+                    </td>
                 </tr>
                 <tr>
-                <td>
-                    <a href="${a.ruta}" target="_blank">
-                    <img class="iconPDF" src="../imagesApp/pdf.svg" alt="pdf icon">
-                    </a>
-                </td>
+                    <td>
+                        <a style="color:black;" href="${a.ruta}" target="_blank">
+                            <div class="tituloPDF">${ titulo }</div>
+                        </a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -173,14 +177,38 @@
             </table>`;
             resultados.appendChild(div);
         });
-        const res = filtrados.length;
-        const total = document.getElementById("totalResultados");
-        total.innerHTML = `<p>${ res } ${ res === 1 ? 'Resultado' : 'Resultados' } </p>`;
+        muestraTotales( filtrados.length );
     }
 
     });
   </script>
 
+<script>
+    function muestraTotales( n ){
+        const total = document.getElementById("totalResultados");
+        total.innerHTML = `<p>${ n } ${ n === 1 ? 'Resultado' : 'Resultados' } </p>`;
+    }
+
+    $('#buscadorManuales').on("change", function(){
+        let valor = $(this).val();
+        filtrador( valor );
+    });
+
+    function filtrador( valor ){
+        
+        $("#listaPDFs").children().show();
+        let cont = 0;
+        $("#listaPDFs").children().each(function() {
+            
+            let valorPDF = $(this).attr("name");
+
+            if ( valorPDF.normalize() != valor.normalize()) {
+                $(this).hide();
+            }else{ cont++; }
+        });
+        muestraTotales( cont );
+    }
+</script>
 
 <?php include('../footer.php'); ?>
 
