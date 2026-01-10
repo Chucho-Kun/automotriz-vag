@@ -26,7 +26,7 @@
         </tr>
     </table>
 
-<script type="text/javascript" src="../js/servicios.js?1"></script>
+<script type="text/javascript" src="../js/servicios.js?4"></script>
 <script>
 
     const serv = portadaServ.concat(servicio1x).concat(servicio2x);

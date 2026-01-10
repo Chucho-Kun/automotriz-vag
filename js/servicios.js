@@ -12,8 +12,8 @@ const portadaServ = [
         {t:"Lavado Cuerpo de Aceleración"},
         {t:"Lavado Exterior de Motor y Carrocería"},
     ],
-    img: servidor+"/imagesServ/motor.jpg",
-    url:"/"
+    img: servidor+"/imagesServ/motor.webp",
+    url:"https://automotrizmora.com/precio-motor/"
 },{
     tipo:"1x",
     titulo:"AJUSTE DE MOTOR",
@@ -23,8 +23,8 @@ const portadaServ = [
         {t:"Motor 6 Cilindros"},
         {t:"Motor 8 Cilindros"},
     ],
-    img: servidor+"/imagesServ/ajuste-de-motor.jpg",
-    url:"/"
+    img: servidor+"/imagesServ/ajuste-de-motor.webp",
+    url:"https://automotrizmora.com/ajuste-de-motor/"
 },{
     tipo:"1x",
     titulo:"TRANSMISIÓN",
@@ -36,8 +36,8 @@ const portadaServ = [
         {t:"Emgrague Haldex"},
         {t:"Mantenimiento para Transmisión"},
     ],
-    img: servidor+"/imagesServ/transmision.jpg",
-    url:"/"
+    img: servidor+"/imagesServ/transmision.webp",
+    url:"https://dsg.automotrizmora.com/price/"
 },{
     tipo:"1x",
     titulo:"SUSPENSIONES",
@@ -47,8 +47,8 @@ const portadaServ = [
         {t:"Entrega en Tiempo y Forma"},
         {t:"Usamos piezas originales"},
     ],
-    img: servidor+"/imagesServ/suspensiones.jpg",
-    url:"/"
+    img: servidor+"/imagesServ/suspensiones.webp",
+    url:"https://automotrizmora.com/precio-suspension/"
 }
 ];
 
@@ -66,8 +66,8 @@ const servicio1x = [
         {t:"Elaboración de Presupuesto"},
         {t:"Solicitud de piezas a fabricante"},
     ],
-    img: servidor+"/imagesServ/diagnostico.jpg",
-    url:"/"
+    img: servidor+"/imagesServ/diagnostico.webp",
+    url:"https://automotrizmora.com/precio-diagnostico/"
 },{
     tipo:"1x",
     titulo:"AIRE ACONDICIONADO",
@@ -77,8 +77,8 @@ const servicio1x = [
         {t:"Bote líquido"},
         {t:"Revisión del sistema"},
     ],
-    img: servidor+"/imagesServ/aire-acondicionado.jpg",
-    url:"/"
+    img: servidor+"/imagesServ/aire-acondicionado.webp",
+    url:"https://automotrizmora.com/precio-aire-acondicionado/"
 },{
     tipo:"1x",
     titulo:"SISTEMA ELÉCTRICO",
@@ -95,8 +95,8 @@ const servicio1x = [
         {t:"Suspensión Trasera"},
         {t:"Frenos Balatas"},
     ],
-    img: servidor+"/imagesServ/sistema-electrico.jpg",
-    url:"/"
+    img: servidor+"/imagesServ/sistema-electrico.webp",
+    url:"https://automotrizmora.com/precio-sistema-electrico/"
 },{
     tipo:"1x",
     titulo:"SISTEMA DE SEGURIDAD",
@@ -106,8 +106,8 @@ const servicio1x = [
         {t:"Balatas de Frenos"},
         {t:"Líquido de Frenos"},
     ],
-    img: servidor+"/imagesServ/sistema-de-seguridad.jpg",
-    url:"/"
+    img: servidor+"/imagesServ/sistema-de-seguridad.webp",
+    url:"https://automotrizmora.com/precio-sistema-de-seguridad/"
 }
 ];
 
@@ -123,8 +123,8 @@ const servicio2x = [
         {t:"Revisión Motor"},
         {t:"Vamos por su coche si está dentro de la cobertura"},
     ],
-    img: servidor+"/imagesServ/verificacion.jpg",
-    url:"/"
+    img: servidor+"/imagesServ/verificacion.webp",
+    url:"https://automotrizmora.com/precio-sistema-de-seguridad/"
 }
 ];
 
@@ -167,7 +167,7 @@ function armaServicios(serv){
                         </tr>
                         <tr>
                             <td>
-                                <a href="${serv[x].url}"><div class="tblBtn">VER MÁS</div></a>
+                                <a href="${serv[x].url}" target="_blank"><div class="tblBtn">VER MÁS</div></a>
                             </td>
                         </tr>
                     </table>`;
@@ -205,7 +205,7 @@ function armaServicios(serv){
                   </tr>
                   <tr>
                     <td style="text-align: center;">
-                        <a href="${serv[x].url}"><div class="tblBtn">VER MÁS</div></a>
+                        <a href="${serv[x].url}" target="_blank"><div class="tblBtn">VER MÁS</div></a>
                     </td>
                   </tr>
                 </table>`;

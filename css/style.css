@@ -22,6 +22,22 @@ ul {
 	padding-left: 0;
 }
 
+.review {
+	width: 100%;
+	max-width:1000px;
+	height: 500px;
+}
+
+@media (min-width: 600px) {
+	.review {
+		height: 300px;
+	}
+}
+
+.star-container {
+	text-align: center;
+}
+
 .mainContainer{
 	max-width: 1200px;
     display: inline-block;
@@ -242,6 +258,16 @@ input:focus{outline: none;}
 @media (min-width:1115px){
 	.verMobil{display: none;} 
 	.verEsc{display: inline-table;}
+}
+
+.mobilDisplay img {
+	width: 100%;
+	height: auto;
+}
+
+.webDisplay img {
+	width: 100%;
+	height: auto;
 }
 
 @media (max-width:900px){

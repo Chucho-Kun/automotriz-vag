@@ -12,7 +12,7 @@ $rutasHeader = [
 ?>
 <?php
 
-echo '<div style="text-align: center;background-color: white;">
+echo '<nav style="text-align: center;background-color: white;">
 
 	<table class="navHeader menuEsc" border="0" width="100%">
 		<tr>
@@ -28,7 +28,7 @@ echo '<div style="text-align: center;background-color: white;">
 
 	<table class="navHeader menuMobil" border="0" width="100%">
 		<tr>
-			<td width="20%"> <a href="/"> <img width="135" height="60" alt="logo Automotriz Mora" class="logos logoMobil_" src="'.$servidor.'imagesApp/logo.webp" /> </a></td>
+			<td width="20%"> <a href="/"> <img width="135" height="60" alt="logo Automotriz Mora" class="logos logoMobil_" src="'.$servidor.'/imagesApp/logo.webp" /> </a></td>
 		</tr>
 	</table>
 
@@ -65,6 +65,6 @@ echo '<div style="text-align: center;background-color: white;">
 </div>
 <div class="menuBTNflotante"><img alt="menu movil" onclick="menuLateral()" width="45" height="45" src="/imagesApp/menuMobile.svg" /></div>
 
-</div>';
+</nav>';
 
 ?>

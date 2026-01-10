@@ -1,24 +1,130 @@
 <!DOCTYPE html>
 <html class="nojs html" lang="es-MX">
 <head>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://automotrizmora.com/#localbusiness-centenario",
+      "name": "Automotriz Mora - Sucursal Centenario",
+      "url": "https://automotrizmora.com",
+      "logo": "https://automotriz-mora.com/imagesApp/logo.webp",
+      "image": "https://automotriz-mora.com/imagesApp/logo.webp",
+      "description": "Taller especializado en diagnóstico y reparación automotriz.",
+      "telephone": "+52-55-7594-1185",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Centenario #607 Colonia Lomas de Tarango Delegación Álvaro Obregón",
+        "addressLocality": "Ciudad de México",
+        "addressRegion": "CDMX",
+        "postalCode": "01620",
+        "addressCountry": "MX"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+52-55-4180-6214",
+        "contactType": "customer service",
+        "areaServed": "MX",
+        "availableLanguage": ["es"]
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "$$",
+      "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "19.36637740161415",
+            "longitude": "-99.21234457382538"
+        },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Ciudad de México y área metropolitana"
+      },
+      "sameAs": [
+        "https://www.facebook.com/AutomotrizMoraVAGSpecialist/",
+        "https://x.com/MoraAutomotriz",
+        "https://www.instagram.com/automotrizmora/"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://automotrizmora.com/#localbusiness-aguilas",
+      "name": "Automotriz Mora - Sucursal Águilas",
+      "url": "https://automotrizmora.com",
+      "logo": "https://automotriz-mora.com/imagesApp/logo.webp",
+      "image": "https://automotriz-mora.com/imagesApp/logo.webp",
+      "description": "Taller especializado en diagnóstico y reparación automotriz.",
+      "telephone": "+52-55-7605-5940",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calzada las Águilas #1349 Puente Colorado Álvaro Obregón",
+        "addressLocality": "Ciudad de México",
+        "addressRegion": "CDMX",
+        "postalCode": "01730",
+        "addressCountry": "MX"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+52-55-8717-8827",
+        "contactType": "customer service",
+        "areaServed": "MX",
+        "availableLanguage": ["es"]
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "$$",
+      "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "19.34824844464574",
+            "longitude": "-99.23142096831518"
+        },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Ciudad de México y área metropolitana"
+      },
+      "sameAs": [
+        "https://www.facebook.com/AutomotrizMoraVAGSpecialist/",
+        "https://x.com/MoraAutomotriz",
+        "https://www.instagram.com/automotrizmora/"
+      ]
+    }
+  ]
+}
+</script>
+
+
 	<meta name="msvalidate.01" content="A68DFB54153C4987F7430A4ECF61D38E" />
     <meta charset="UTF-8">
     <meta name="description"
-        content="" />
+        content="Servicio mecanico automotriz cdmx df, servicio Especializado en Seat, Audi, Volkswagen, Mini, BMW, Mercedes. Cajas DSG 0am, Motores TSI TDI TFSI, líquidos transmisión, cuerpo de válvulas" />
     <meta name="keywords"
-        content="Compra tus boletos de autobús, venta de boletos de autobús, boletos de autobús a guadalajara, boletos de autobús a monterrey, boletos de autobús a torreon, boletos de autobús a Aguascalientes, boletos de autobús a ciudad de mexico, boletos de autobús a Durango, boletos de autobús a Guanajuato, boletos de autobús a jalisco, boletos de autobús a Querétaro, boletos de autobús a Tamaulipas, boletos de autobús a Veracruz, boletos de autobús a Zacatecas">
+        content="Servicio mecanico automotriz cdmx df, servicio Especializado en Seat, Audi, Volkswagen, Mini, BMW, Mercedes. Cajas DSG 0am, Motores TSI TDI TFSI, líquidos transmisión, cuerpo de válvulas">
     <meta name="generator" content="2015.1.2.344" />
 
-    <meta property="og:title" content="Omnibus de México | Boletos de Autobús con Descuento" />
+    <meta property="og:title" content="Automotriz Mora" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://odm.com.mx/imagen/portadaODM.jpg" />
-    <meta property="og:image:width" content="526" />
-    <meta property="og:image:height" content="275" />
-    <meta property="og:url" content="https://odm.com.mx/" />
-    <meta property="fb:app_id" content="924618924312226" />
+    <meta property="og:image" content="https://automotriz-mora.com/imagesApp/logo.webp" />
+    <meta property="og:image:width" content="804" />
+    <meta property="og:image:height" content="355" />
+    <meta property="og:url" content="https://automotriz-mora.com/" />
     <meta property="og:description"
-        content="Omnibus de México compra en línea tus boletos de autobús y obtén 5% de descuento en viaje sencillo y 10% en viaje redondo más meses sin intereses ó pagos diferidos *Aplican restricciones*" />
+        content="Servicio mecanico automotriz cdmx df, servicio Especializado en Seat, Audi, Volkswagen, Mini, BMW, Mercedes. Cajas DSG 0am, Motores TSI TDI TFSI, líquidos transmisión, cuerpo de válvulas" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
@@ -26,14 +132,11 @@
     <link rel="manifest" href="favicon/site.webmanifest" />
 
   	<title>Mora Automotriz, Transmisiones DSG</title>
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link rel="stylesheet" href="css/style.css?12">
+    <link rel="stylesheet" href="css/style.css?a">
     </head>
 
 <body>
-
-<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 
 <?php include('nav.php'); ?>
 
@@ -53,12 +156,11 @@
     <div class="reservacionesTxt">especialistas en grupo vag y motores europeos</div>
 </div>
 <div class="linear">
-    <div class="mainContainer">
-        <script defer async src='https://cdn.trustindex.io/loader.js?318bef557aee6898a226fead0bf'></script>
-    </div>
+        <iframe class="review" title="reseñas del servicio" src="reviews/" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        <!-- <script defer async src='https://cdn.trustindex.io/loader.js?ChIJkVYZXML-0YURfsvwAwf-UiU'></script> -->
 </div>
 
-<div>
+<main>
     <div class="mainContainer">
         
         <div style="text-align: center;margin:40px 0px;">
@@ -66,49 +168,31 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img alt="logo vw" style="width: 100%;" src="imagesApp/vw.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo vw" style="width: 100%;" src="imagesApp/vw.webp">
                         </td>
                         <td>
-                            <img alt="logo audi" style="width: 100%;" src="imagesApp/audi.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo audi" style="width: 100%;" src="imagesApp/audi.webp">
                         </td>
                         <td>
-                            <img alt="logo seat" style="width: 100%;" src="imagesApp/seat.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo seat" style="width: 100%;" src="imagesApp/seat.webp">
                         </td>
                         <td>
-                            <img alt="logo mercedes" style="width: 100%;" src="imagesApp/mercedes.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo mercedes" style="width: 100%;" src="imagesApp/mercedes.webp">
                         </td>
                         <td>
-                            <img alt="logo bmw" style="width: 100%;" src="imagesApp/bmw.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo bmw" style="width: 100%;" src="imagesApp/bmw.webp">
                         </td>
                         <td>
-                            <img alt="logo mini" style="width: 100%;" src="imagesApp/mini.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo mini" style="width: 100%;" src="imagesApp/mini.webp">
                         </td>
                         <td>
-                            <img alt="logo porsch" style="width: 100%;" src="imagesApp/porsch.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo porsch" style="width: 100%;" src="imagesApp/porsch.webp">
                         </td>
                         <td>
-                            <img alt="logo cupra" style="width: 100%;" src="imagesApp/cupra.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo cupra" style="width: 100%;" src="imagesApp/cupra.webp">
                         </td>
                         <td>
-                            <img alt="logo jaguar" style="width: 100%;" src="imagesApp/jaguar.webp">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="mobilDisplay" border="0" style="display: inline-table;max-width: 900px;">
-                <tbody>
-                    <tr>
-                        <td>
-                            <img alt="logo vw" style="width: 100%;" src="imagesApp/vw.webp">
-                        </td>
-                        <td>
-                            <img alt="logo audi" style="width: 100%;" src="imagesApp/audi.webp">
-                        </td>
-                        <td>
-                            <img alt="logo seat" style="width: 100%;" src="imagesApp/seat.webp">
-                        </td>
-                        <td>
-                            <img alt="logo mercedes" style="width: 100%;" src="imagesApp/mercedes.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo jaguar" style="width: 100%;" src="imagesApp/jaguar.webp">
                         </td>
                     </tr>
                 </tbody>
@@ -117,19 +201,37 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img alt="logo bmw" style="width: 100%;" src="imagesApp/bmw.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo vw" src="imagesApp/vw.webp">
                         </td>
                         <td>
-                            <img alt="logo mini" style="width: 100%;" src="imagesApp/mini.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo audi" src="imagesApp/audi.webp">
                         </td>
                         <td>
-                            <img alt="logo porsch" style="width: 100%;" src="imagesApp/porsch.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo seat" src="imagesApp/seat.webp">
                         </td>
                         <td>
-                            <img alt="logo cupra" style="width: 100%;" src="imagesApp/cupra.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo mercedes" src="imagesApp/mercedes.webp">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="mobilDisplay" border="0" style="display: inline-table;max-width: 900px;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img width="155" height="80" loading="lazy" alt="logo bmw" src="imagesApp/bmw.webp">
                         </td>
                         <td>
-                            <img alt="logo jaguar" style="width: 100%;" src="imagesApp/jaguar.webp">
+                            <img width="155" height="80" loading="lazy" alt="logo mini" src="imagesApp/mini.webp">
+                        </td>
+                        <td>
+                            <img width="155" height="80" loading="lazy" alt="logo porsch" src="imagesApp/porsch.webp">
+                        </td>
+                        <td>
+                            <img width="155" height="80" loading="lazy" alt="logo cupra" src="imagesApp/cupra.webp">
+                        </td>
+                        <td>
+                            <img width="155" height="80" loading="lazy" alt="logo jaguar" src="imagesApp/jaguar.webp">
                         </td>
                     </tr>
                 </tbody>
@@ -146,9 +248,10 @@
         </table>
 
     </div>
-</div>
+</main>
 
-<script type="text/javascript" src="js/servicios.js?1"></script>
+<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="js/servicios.js?2"></script>
 <script>
 
     const serv = portadaServ.concat(servicio2x);

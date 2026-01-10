@@ -1,0 +1,14 @@
+# Bloquear todos los rastreadores de todas las pÃ¡ginas
+User-agent: *
+Disallow: /phpMailer/
+Disallow: /disenos/
+
+# Permitir el acceso a
+User-agent: *
+Allow: /impresion-digital/
+Allow: /impresion-en-lonas/
+Allow: /impresion-en-vinil/
+Allow: /proyectos-especiales/
+
+# Sitemap
+Sitemap: https://marketingmap.com.mx/sitemap.xml

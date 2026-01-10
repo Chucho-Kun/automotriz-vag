@@ -7,8 +7,11 @@ $year_footer = date("Y");
 echo '
 <script>
     const path = window.location.pathname;
-    const seccion = path.split(\'/\').filter(Boolean)[1];
-    $(\'#\'+seccion).css(\'border-bottom\', \'solid\');
+	const seccion = path.replace(/^\/|\/$/g, \'\');
+	console.log({ seccion })
+	if( seccion !== \'\'){
+		$(\'#\'+seccion).css(\'border-bottom\', \'solid\');
+	}
 </script>
 <script>
 
@@ -63,7 +66,7 @@ function menuLateral(){
         <tr>
 			<td height="120"> 
                 <a href="http://dsg.automotrizmora.com/">
-                    <img alt="logo omnibus de mexico" class="rssBtn" width="250" style="display: inline-block;" src="'.$servidor.'/imagesApp/logoblanco.svg" >
+                    <img alt="logo omnibus de mexico" loading="lazy" class="rssBtn" width="250" height="33" style="display: inline-block;" src="'.$servidor.'/imagesApp/logoblanco.svg" >
                 </a>
             </td>
 		</tr>

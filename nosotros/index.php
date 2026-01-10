@@ -55,8 +55,9 @@
         </tr>
     </table>
 
-    <div style="margin-top:30px;  " class="mainContainer">
-        <script defer async src='https://cdn.trustindex.io/loader.js?318bef557aee6898a226fead0bf'></script>
+    <div class="linear">
+        <iframe class="review" title="reseñas del servicio" src="../reviews/" loading="lazy" scrolling="no" frameborder="0"></iframe>
+        <!-- <script defer async src='https://cdn.trustindex.io/loader.js?ChIJkVYZXML-0YURfsvwAwf-UiU'></script> -->
     </div>
 
 <?php include('../footer.php'); ?>
