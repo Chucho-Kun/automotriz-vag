@@ -2,9 +2,13 @@
 
 $servidor = "/";
 
+$slash = ( $_SERVER['REQUEST_URI'] === '/index.php') ? '/' : $_SERVER['REQUEST_URI'] ;
+$canonical = 'https://automotriz-mora.com' . $slash;
+
 echo '<!DOCTYPE html>
 <html class="nojs html" lang="es-MX">
 <head>
+    <link rel="canonical" href="'.$canonical.'" />
 	<meta name="msvalidate.01" content="A68DFB54153C4987F7430A4ECF61D38E" />
     <meta charset="UTF-8">
     <meta name="description"
@@ -18,7 +22,7 @@ echo '<!DOCTYPE html>
     <meta property="og:image" content="https://automotriz-mora.com/imagesApp/logo.webp" />
     <meta property="og:image:width" content="804" />
     <meta property="og:image:height" content="355" />
-    <meta property="og:url" content="https://automotriz-mora.com/" />
+    <meta property="og:url" content="https://automotriz-mora.com" />
     <meta property="og:description"
         content="Servicio mecanico automotriz cdmx df, servicio Especializado en Seat, Audi, Volkswagen, Mini, BMW, Mercedes. Cajas DSG 0am, Motores TSI TDI TFSI, líquidos transmisión, cuerpo de válvulas" />
 

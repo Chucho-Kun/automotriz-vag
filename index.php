@@ -120,11 +120,12 @@
     <meta property="og:image" content="https://automotriz-mora.com/imagesApp/logo.webp" />
     <meta property="og:image:width" content="804" />
     <meta property="og:image:height" content="355" />
-    <meta property="og:url" content="https://automotriz-mora.com/" />
+    <meta property="og:url" content="https://automotriz-mora.com" />
     <meta property="og:description"
         content="Servicio mecanico automotriz cdmx df, servicio Especializado en Seat, Audi, Volkswagen, Mini, BMW, Mercedes. Cajas DSG 0am, Motores TSI TDI TFSI, líquidos transmisión, cuerpo de válvulas" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="canonical" href="https://automotriz-mora.com" />
 	<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
