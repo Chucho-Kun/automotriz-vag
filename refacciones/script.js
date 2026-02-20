@@ -1,22 +1,27 @@
 
-    let archivos = [];
+let archivos = [];
 
-    fetch("armador.php")
-      .then(res => res.json())
-      .then(data => {
-        archivos = data;
-        // console.log({archivos});
-      } );
+fetch("armador.php")
+    .then(res => res.json())
+    .then(data => {
+    archivos = data;
+    // console.log({archivos});
+    } );
 
-    const buscador = document.getElementById("buscador");
-    const resultados = document.getElementById("listaPDFs");
+const buscador = document.getElementById("buscador");
+const resultados = document.getElementById("listaPDFs");
 
-    buscador.addEventListener("input", () => {
-        const texto = buscador.value.toLowerCase();
-        resultadosPDF( texto )
-    });
+buscador.addEventListener("input", () => {
+    const texto = buscador.value.toLowerCase();
+    resultadosPDF( texto )
+});
 
-    function resultadosPDF( caracteres ){
+function rutaPDF(rutaRaw) {
+    const ruta = rutaRaw.replace(/^\/\//, "../");
+    return ruta
+}
+
+function resultadosPDF( caracteres ){
     
     const texto = caracteres.toLowerCase();
     
@@ -47,7 +52,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a style="color:black;" href="${a.ruta}" target="_blank">
+                        <a style="color:black;" href="${ rutaPDF(a.ruta) }" target="_blank">
                             <div class="tituloPDF">${ titulo }</div>
                         </a>
                     </td>
@@ -67,54 +72,54 @@
         });
         muestraTotales( filtrados.length );
     }
-    }
+}
 
-    function muestraTotales( n ){
-        const total = document.getElementById("totalResultados");
-        total.innerHTML = `<p>${ n } ${ n === 1 ? 'Resultado' : 'Resultados' } </p>`;
-    }
+function muestraTotales( n ){
+    const total = document.getElementById("totalResultados");
+    total.innerHTML = `<p>${ n } ${ n === 1 ? 'Resultado' : 'Resultados' } </p>`;
+}
 
-    $('#buscadorManuales').on("change", function(){
-        let valor = $(this).val();
-        filtrador( valor );
-    });
+$('#buscadorManuales').on("change", function(){
+    let valor = $(this).val();
+    filtrador( valor );
+});
 
-    function filtrador( valor ){
+function filtrador( valor ){
+    
+    $("#listaPDFs").children().show();
+    let cont = 0;
+    $("#listaPDFs").children().each(function() {
         
-        $("#listaPDFs").children().show();
-        let cont = 0;
-        $("#listaPDFs").children().each(function() {
-            
-            let valorPDF = $(this).attr("name");
+        let valorPDF = $(this).attr("name");
 
-            if ( valorPDF.normalize() != valor.normalize()) {
-                $(this).hide();
-            }else{ cont++; }
-        });
-        muestraTotales( cont );
-    }
-
-    const botones = document.querySelectorAll(".unSelect");
-
-    botones.forEach( boton => {
-        boton.addEventListener("click", () => {
-            botones.forEach( b => {
-                b.classList.remove('tblBtn');
-                b.classList.add('unSelect')
-            });
-
-            boton.classList.remove('unSelect');
-            boton.classList.add('tblBtn');
-        });
+        if ( valorPDF.normalize() != valor.normalize()) {
+            $(this).hide();
+        }else{ cont++; }
     });
+    muestraTotales( cont );
+}
 
-    function btnBuscar(valor) {
-        // document.getElementById("buscador").value = valor+ " ";
-        resultadosPDF(valor);
-    }
+const botones = document.querySelectorAll(".unSelect");
 
-    $("#buscadorGarantias").select2();
-    $("#buscadorManuales").select2();
+botones.forEach( boton => {
+    boton.addEventListener("click", () => {
+        botones.forEach( b => {
+            b.classList.remove('tblBtn');
+            b.classList.add('unSelect')
+        });
+
+        boton.classList.remove('unSelect');
+        boton.classList.add('tblBtn');
+    });
+});
+
+function btnBuscar(valor) {
+    // document.getElementById("buscador").value = valor+ " ";
+    resultadosPDF(valor);
+}
+
+$("#buscadorGarantias").select2();
+$("#buscadorManuales").select2();
 
 
 // Audi A6 Sedan 4G - 2011/2018 | MLB (2L)
