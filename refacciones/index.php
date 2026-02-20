@@ -39,7 +39,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
-        padding: 10px;
+        padding: 6px;
         border-radius: 0px 0px 8px 8px;
     }
 
@@ -74,6 +74,20 @@
         font-family: 'Jost', sans-serif;
         font-weight: bold;
     }
+
+    .unSelect {
+        color: gray;
+        border: solid 1px gray;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 5px;
+        width: 150px;
+        border-radius: 8px;
+        display: inline-table;
+        margin: 5px;
+        font-size: 14px;
+        cursor: pointer;
+    }
 </style>
 
 <body>
@@ -88,11 +102,26 @@
         </tr>
         <tr>
             <td>
+                <p>Selecciona cualquiera de las siguientes categorias:</p>
+                <!-- <p>Opciones de Manuales y Garantías:</p> -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="modelos">
+                    <div onclick="btnBuscar('BMW')" class="unSelect">BMW</div>
+                    <div onclick="btnBuscar('Mercedes')" class="unSelect">Mercedes</div>
+                    <div onclick="btnBuscar('VAG')" class="unSelect">VAG</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
 
                 <table class="contenedor" border="0">
                   <tr>
                     <td>
-                        <input type="text" id="buscador" placeholder="Buscar PDF...">
+                        <input type="text" id="buscador" placeholder="Manual o Garantía...">
                         <select id="buscadorManuales">
                             <option selected="selected" disabled>Procedimientos</option>   
                             <option value="Dirección">Dirección</option>
@@ -106,7 +135,7 @@
                   </tr>
                   <tr>
                     <td>
-                          <div id="totalResultados"></div>
+                          <div id="totalResultados">0 Resultados</div>
                     </td>
                   </tr>
                 </table>
@@ -118,110 +147,13 @@
     <div id="listaPDFs"></div>
 </head>
 
-
-
-  <script>
-    let archivos = [];
-
-    fetch("armador.php")
-      .then(res => res.json())
-      .then(data => {
-        archivos = data;
-      } );
-
-    const buscador = document.getElementById("buscador");
-    const resultados = document.getElementById("listaPDFs");
-
-    buscador.addEventListener("input", () => {
-    const texto = buscador.value.toLowerCase();
-    resultados.innerHTML = "";
-
-    if(texto.length >= 3){
-        const filtrados = archivos.filter(a => a.nombre.toLowerCase().includes(texto));
-
-        filtrados.forEach(a => {
-            const div = document.createElement("div");
-            div.classList.add("contResult");
-            div.setAttribute("name" , a.categoria );
-
-            let rawString = a.nombre;
-            let partes = rawString.split("|");
-            partes = partes.map( p => p.trim() );
-
-            let titulo = partes.pop();
-            let tags = partes.filter( cat =>  cat !== "Procedimientos y aprietes" );
-
-            div.innerHTML = `
-            <table class="pdf" border="0">
-                <tr>
-                    <td>
-                        <a href="${a.ruta}" target="_blank">
-                        <img class="iconPDF" src="../imagesApp/pdf.svg" alt="pdf icon">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a style="color:black;" href="${a.ruta}" target="_blank">
-                            <div class="tituloPDF">${ titulo }</div>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    <div id="tags">${
-                        tags.map( tag => '<p>'+tag+'</p>').join('')
-                    }
-                    </div>
-                </td>
-            </table>`;
-            resultados.appendChild(div);
-        });
-        muestraTotales( filtrados.length );
-    }
-
-    });
-  </script>
-
-<script>
-    function muestraTotales( n ){
-        const total = document.getElementById("totalResultados");
-        total.innerHTML = `<p>${ n } ${ n === 1 ? 'Resultado' : 'Resultados' } </p>`;
-    }
-
-    $('#buscadorManuales').on("change", function(){
-        let valor = $(this).val();
-        filtrador( valor );
-    });
-
-    function filtrador( valor ){
-        
-        $("#listaPDFs").children().show();
-        let cont = 0;
-        $("#listaPDFs").children().each(function() {
-            
-            let valorPDF = $(this).attr("name");
-
-            if ( valorPDF.normalize() != valor.normalize()) {
-                $(this).hide();
-            }else{ cont++; }
-        });
-        muestraTotales( cont );
-    }
-</script>
+<script src="../js/select2.js"></script>
+<link rel="stylesheet" href="../css/select2.css">
+<script src="script.js"></script>
 
 <?php include('../footer.php'); ?>
 
 </div>
-
-<script src="../js/select2.js"></script>
-<link rel="stylesheet" href="../css/select2.css">
-
-<script>
-    $("#buscadorGarantias").select2();
-    $("#buscadorManuales").select2();
-</script>
-
 </body>
 </html>
 

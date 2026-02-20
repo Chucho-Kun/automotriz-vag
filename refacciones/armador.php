@@ -1,5 +1,6 @@
 <?php
-include('../router.php');
+//include('../router.php');
+$servidor = "/";
 
 function listarPDFs($dir) {
     $archivos = [];
